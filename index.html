@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Backtick</title>
+  <meta name="description" content="Backtick is a console for bookmarklets and scripts, packaged as a Chrome extension.">
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/daiejhinmmfgincamkeeobmpffhdljim">
+  <link rel="icon" href="assets/images/backtick.png">
+
+  <link rel="stylesheet" href="css/main.css?v=4">
+  <link rel="stylesheet" href="css/container.css?v=4">
+  <link rel="stylesheet" href="css/style.css?v=4">
+
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-45140113-4']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body>
+  <div class="site-container">
+    <header>
+      <h1><img src="assets/images/backtick.png" alt="Backtick">Backtick</h1>
+      <span class="subheading">Powerful Commands, Just One Tick Away</span>
+    </header>
+
+    <div class="buttons">
+      <button class="try">Try it out</button>
+      <button class="install">Install it</button>
+    </div>
+
+    <p class="sorry">
+      Sorry, this extension is for Chrome only.
+    </p>
+
+    <div class="section">
+      <h2>What is it?</h2>
+      <p><strong>Backtick is a console for bookmarklets and scripts</strong>, packaged as a Chrome extension. For a better explanation, just click that <em>Try it out</em> button already, or press the <em>backtick ( ` )</em> key on your keyboard.</p>
+
+      <p>
+        <strong>The extension comes with a set of predefined commands</strong>, but you can <a href="https://gist.github.com/JoelBesada/6859173">easily create your own</a> to use yourself or share with others.
+      </p>
+
+      <p>Backtick was created by Joel, <a href="https://twitter.com/JoelBesada">@JoelBesada</a>, and is being maintained and improved by me, <a href="https://twitter.com/iambriansreed">@iamBrianSReed</a>, and is <a href="https://github.com/BacktickBacktick">open sourced on GitHub</a>.
+      </p>
+
+      <p class="share-links">
+        Share on: <a href="#" data-command="Twitter">Twitter</a> &ndash; <a href="#" data-command="Facebook">Facebook</a> &ndash; <a href="#" data-command="Google+">Google+</a>
+      </p>
+    </div>
+  </div>
+  <script>if (!window.chrome) document.body.className = "not-chrome"</script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js"></script>
+  <script src="scripts/app.js?v=4"></script>
+  <script src="scripts/main.js?v=4"></script>
+</body>
+</html>
