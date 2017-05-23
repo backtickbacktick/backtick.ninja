@@ -2,38 +2,50 @@
     font-family: 'Lato';
     font-style: normal;
     font-weight: 300;
-    src: local('Lato Light'), local('Lato-Light'), url('/assets/fonts/Lato-Light.ttf') format('woff');
+    src: local("Lato Light"), local("Lato-Light"), url('/assets/fonts/Lato-Light.ttf') format("woff");
 }
+
+
 @font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    src: local('Lato Regular'), local('Lato-Regular'), url('/assets/fonts/Lato-Regular.ttf') format('woff');
+    src: local("Lato Regular"), local("Lato-Regular"), url('/assets/fonts/Lato-Regular.ttf') format("woff");
 }
+
+
 @font-face {
     font-family: 'Lato';
     font-style: normal;
     font-weight: 700;
-    src: local('Lato Bold'), local('Lato-Bold'), url('/assets/fonts/Lato-Bold.ttf') format('woff');
+    src: local("Lato Bold"), local("Lato-Bold"), url('/assets/fonts/Lato-Bold.ttf') format("woff");
 }
+
+
 @font-face {
     font-family: 'Lato';
     font-style: italic;
     font-weight: 400;
-    src: local('Lato Italic'), local('Lato-Italic'), url('/assets/fonts/Lato-Italic.ttf') format('woff');
+    src: local("Lato Italic"), local("Lato-Italic"), url('/assets/fonts/Lato-Italic.ttf') format("woff");
 }
+
+
 body {
     background: #FFF4E8;
     color: #362d26;
     font-family: "Lato", sans-serif;
     padding-bottom: 100px;
 }
-.not-chrome .buttons {
+
+.not-chrome {
+.buttons {
     display: none;
 }
-.not-chrome .sorry {
+.sorry {
     display: block;
 }
+}
+
 .sorry {
     display: none;
     font-size: 24px;
@@ -43,43 +55,45 @@ body {
     padding: 20px;
     width: 100%;
 }
+
 .site-container {
-    width: 525px;
+    max-width: 625px;
     margin: 0 auto;
     text-align: center;
-}
-.site-container * {
+* {
     box-sizing: border-box;
 }
-.site-container header {
+header {
     margin-bottom: 40px;
-}
-.site-container header img {
+img {
     width: 100px;
     vertical-align: top;
     height: 100px;
     margin-left: -35px;
 }
-.site-container header h1 {
+h1 {
     font-weight: bold;
     vertical-align: top;
     font-size: 80px;
     margin-bottom: 10px;
 }
-.site-container header .subheading {
+.subheading {
     font-size: 28px;
     font-weight: 300;
 }
-.site-container a,
-.site-container a:visited {
+}
+a {
     color: #E49219;
     text-decoration: none;
+&:visited {
+     color: #E49219;
+     text-decoration: none;
+ }
+&:hover, &:visited:hover {
+              text-decoration: underline;
+          }
 }
-.site-container a:hover,
-.site-container a:visited:hover {
-    text-decoration: underline;
-}
-.site-container button {
+button {
     display: inline-block;
     font-family: "Lato", sans-serif;
     background-color: #FAA72C;
@@ -91,42 +105,43 @@ body {
     box-shadow: none;
     outline: none;
     transition: background-color 0.15s;
+    margin: 10px;
+&:hover {
+     background-color: #fbb145;
+ }
+&:active {
+     position: relative;
+     top: 1px;
+ }
 }
-.site-container button:hover {
-    background-color: #fbb145;
-}
-.site-container button:active {
-    position: relative;
-    top: 1px;
-}
-.site-container .buttons {
+.buttons {
     margin-bottom: 80px;
 }
-.site-container button.try {
+button.try {
     background-color: #42311A;
-    margin-right: 10px;
+&:hover {
+     background-color: #543f21;
+ }
 }
-.site-container button.try:hover {
-    background-color: #543f21;
-}
-.site-container .section {
+.section {
     text-align: left;
     line-height: 1.8em;
-    width: 525px;
+    max-width: 625px;
     margin: 0 auto;
     margin-top: 70px;
-}
-.site-container .section h2 {
+h2 {
     font-weight: 300;
     font-size: 32px;
     text-align: center;
 }
-.site-container .section p {
+p {
     font-size: 18px;
     text-align: justify;
 }
-.site-container .section .share-links {
+.share-links {
     margin-top: 30px;
     font-weight: bold;
     text-align: center;
+}
+}
 }
