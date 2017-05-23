@@ -93,7 +93,7 @@ body {
       position: relative;
       top: 1px; }
   .site-container .buttons {
-    margin-bottom: 80px; }
+    margin-bottom: 40px; }
   .site-container button.try {
     background-color: #42311A; }
     .site-container button.try:hover {
@@ -102,7 +102,7 @@ body {
     text-align: left;
     line-height: 1.8em;
     max-width: 625px;
-    margin: 70px auto 0; }
+    margin: 0 auto; }
     .site-container .section h2 {
       font-weight: 300;
       font-size: 32px;
