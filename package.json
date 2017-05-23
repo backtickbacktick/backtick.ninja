@@ -6,9 +6,12 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "^1.0.1",
-    "grunt-contrib-coffee": "^1.0.0"
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
   },
   "scripts": {
+    "web": "open -a \"Google Chrome\" http://127.0.0.1:8000 && http-server -p 8000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
