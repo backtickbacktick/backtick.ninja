@@ -17,9 +17,19 @@
         <span class="subheading">Commands Library</span>
     </header>
 
-    <p class="sorry">
+    <p class="loading">
         Sorry, this extension is for Chrome only.
     </p>
+
+    <script type="text/template" id="commandTemplate">
+        <div class="command">
+            <img class="icon" src="(icon)">
+            <h2>(name)</h2>
+            <span class="author">(author)</span>
+            <p>(description)</p>
+            (link)
+        </div>
+    </script>
 
     <div class="section">
 
@@ -37,6 +47,8 @@
     </div>
 </div>
 <script>if (!window.chrome || false) document.body.className = "not-chrome"</script>
+<script src="/scripts/jquery.min.js"></script>
+<script src="/scripts/library.js"></script>
 <script src="/scripts/main.js"></script>
 </body>
 </html>

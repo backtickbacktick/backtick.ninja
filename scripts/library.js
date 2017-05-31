@@ -1,0 +1,7 @@
+new Library();
+
+function Library() {
+
+
+
+}
