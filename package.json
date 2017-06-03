@@ -1,32 +1,35 @@
 {
-  "name": "backtick.ninja",
-  "version": "0.0.1",
-  "description": "Website for the Backtick Chrome Extension",
-  "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-coffee": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-sass": "^2.0.0"
-  },
-  "scripts": {
-    "start": "open -a \"Google Chrome\" http://127.0.0.1:8000 && http-server -p 8000 | grunt watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/backtickbacktick/backtick.ninja.git"
-  },
-  "keywords": [
-    "backtick",
-    "chrome",
-    "extension"
-  ],
-  "author": "Brian Reed <me@iambrian.com> (http://iambrian.com)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/backtickbacktick/backtick.ninja/issues"
-  },
-  "homepage": "https://github.com/backtickbacktick/backtick.ninja#readme"
+	"name": "backtick.ninja",
+	"version": "0.0.1",
+	"description": "Website for the Backtick Chrome Extension",
+	"main": "index.js",
+	"dependencies": {
+		"node-static": "^0.7.9"
+	},
+	"devDependencies": {
+		"grunt": "^1.0.1",
+		"grunt-contrib-coffee": "^1.0.0",
+		"grunt-contrib-watch": "^1.0.0",
+		"grunt-sass": "^2.0.0"
+	},
+	"scripts": {
+		"start": "node server.js",
+		"develop": "open -a \"Google Chrome\" http://127.0.0.1:8000 && node server.js | grunt watch",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/backtickbacktick/backtick.ninja.git"
+	},
+	"keywords": [
+		"backtick",
+		"chrome",
+		"extension"
+	],
+	"author": "Brian Reed <me@iambrian.com> (http://iambrian.com)",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/backtickbacktick/backtick.ninja/issues"
+	},
+	"homepage": "https://github.com/backtickbacktick/backtick.ninja#readme"
 }
