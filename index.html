@@ -10,6 +10,9 @@
     <link rel="icon" href="/assets/images/backtick.png">
 
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="chrome-webstore-item"
+          href="https://chrome.google.com/webstore/detail/daiejhinmmfgincamkeeobmpffhdljim">
+
 </head>
 <body>
 <div class="site-container">
@@ -20,7 +23,8 @@
 
     <div class="buttons">
         <!-- button class="try">Try it out</button -->
-        <button class="install" onclick="window.location='https://chrome.google.com/webstore/detail/backtick/daiejhinmmfgincamkeeobmpffhdljim'">Install it</button>
+
+        <button onclick="chrome.webstore.install()" class="install">Install it</button>
     </div>
 
     <p class="sorry">
