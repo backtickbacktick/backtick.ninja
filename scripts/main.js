@@ -30,33 +30,32 @@ if (typeof window.chrome === 'undefined') {
             document.querySelector('.gists-list')
                 .innerHTML = gistForks.map(buildHtmlGist).join('');
         });
-}
 
-function getJSON(url) {
+    function getJSON(url) {
 
-    if (url.indexOf('/') === 0 && url.indexOf('//') !== 0) {
-        url = window.location.origin + url;
+        if (url.indexOf('/') === 0 && url.indexOf('//') !== 0) {
+            url = window.location.origin + url;
+        }
+
+        return new Promise((resolve, reject) => {
+            let request = new XMLHttpRequest();
+            request.open('GET', url, true);
+            request.onload = () => {
+                if (request.status >= 200 && request.status < 400) {
+                    // Success!
+                    resolve(JSON.parse(request.responseText));
+                } else {
+                    reject(request.response);
+                }
+            };
+            request.onerror = (error) => reject(error);
+            request.send();
+        });
     }
 
-    return new Promise((resolve, reject) => {
-        let request = new XMLHttpRequest();
-        request.open('GET', url, true);
-        request.onload = () => {
-            if (request.status >= 200 && request.status < 400) {
-                // Success!
-                resolve(JSON.parse(request.responseText));
-            } else {
-                reject(request.response);
-            }
-        };
-        request.onerror = (error) => reject(error);
-        request.send();
-    });
-}
-
-function buildHtmlCommand(command) {
-    command = Object.assign({ link: '', icon: defaultCommandIcon }, command);
-    return `
+    function buildHtmlCommand(command) {
+        command = Object.assign({ link: '', icon: defaultCommandIcon }, command);
+        return `
 <li class="command" id="command-${command.slug}">
     <div class="icon" style="background-image: url(${command.icon})"></div>
     <div class="body">
@@ -65,10 +64,10 @@ function buildHtmlCommand(command) {
         ` + (command.link ? `<a class="link" href="${command.link}">${command.link}</a>` : '') + `
     </div>
 </li>`;
-}
+    }
 
-function buildHtmlGist(gist) {
-    return `
+    function buildHtmlGist(gist) {
+        return `
 <li class="command gist">
     <div class="body">
         <span class="name">${gist.name}</span>
@@ -77,4 +76,5 @@ function buildHtmlGist(gist) {
         ` + (gist.link ? `<a class="link" href="${gist.link}">View Gist (${gist.id})</a>` : '') + `
     </div>
 </li>`;
+    }
 }
