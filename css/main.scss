@@ -69,6 +69,7 @@ body {
 	* {
 		box-sizing: border-box;
 	}
+
 	header {
 
 		margin-bottom: 40px;
@@ -93,6 +94,7 @@ body {
 			font-weight: 300;
 		}
 	}
+
 	a {
 		color: #E49219;
 		text-decoration: none;
@@ -104,6 +106,7 @@ body {
 			text-decoration: underline;
 		}
 	}
+
 	button {
 		display: inline-block;
 		font-family: "Lato", sans-serif;
@@ -134,11 +137,12 @@ body {
 			background-color: #543f21;
 		}
 	}
+
 	.section {
 		text-align: left;
 		line-height: 1.8em;
 		max-width: 625px;
-		margin: 0 auto;
+		margin: 0 auto 5em;
 		h2 {
 			font-weight: 300;
 			font-size: 32px;
