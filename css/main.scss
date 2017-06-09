@@ -40,7 +40,7 @@ body {
 }
 
 .not-chrome {
-	.buttons {
+	.buttons, .section.misc-commands, .section.command-library {
 		display: none;
 	}
 
