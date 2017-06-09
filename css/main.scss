@@ -39,6 +39,10 @@ body {
 	padding-bottom: 100px;
 }
 
+.buttons.not-chrome {
+	display: none;
+}
+
 .not-chrome {
 	.buttons, .section.misc-commands, .section.command-library {
 		display: none;
