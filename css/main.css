@@ -31,6 +31,7 @@ body {
 .not-chrome .buttons {
   display: none; }
 
+.not-chrome .buttons.not-chrome,
 .not-chrome .sorry {
   display: block; }
 

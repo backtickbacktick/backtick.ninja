@@ -7,27 +7,30 @@
 ga('create', 'UA-51020929-7', 'auto');
 ga('send', 'pageview');
 
-if (chrome.app.isInstalled) {
-    console.log('installed!');
-}
+if (typeof window.chrome === 'undefined') {
 
-if (!window.chrome || false) {
     document.body.className = 'not-chrome';
+
+} else {
+
+    if (chrome.app.isInstalled) {
+        console.log('installed!');
+    }
+
+    const defaultCommandIcon = 'https://backtick.ninja/assets/images/command-default.png';
+
+    getJSON('https://backtick.ninja/library/commands.json')
+        .then(libraryCommands => {
+            document.querySelector('.commands-list')
+                .innerHTML = libraryCommands.map(buildHtmlCommand).join('');
+        });
+
+    getJSON('/gist-forks.json')
+        .then(gistForks => {
+            document.querySelector('.gists-list')
+                .innerHTML = gistForks.map(buildHtmlGist).join('');
+        });
 }
-
-const defaultCommandIcon = 'https://backtick.ninja/assets/images/command-default.png';
-
-getJSON('https://backtick.ninja/library/commands.json')
-    .then(libraryCommands => {
-        document.querySelector('.commands-list')
-            .innerHTML = libraryCommands.map(buildHtmlCommand).join('');
-    });
-
-getJSON('/gist-forks.json')
-    .then(gistForks => {
-        document.querySelector('.gists-list')
-            .innerHTML = gistForks.map(buildHtmlGist).join('');
-    });
 
 function getJSON(url) {
 

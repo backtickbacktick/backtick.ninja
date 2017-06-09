@@ -21,15 +21,19 @@
         <span class="subheading">Powerful Commands, Just One Tick Away</span>
     </header>
 
-    <div class="buttons">
-        <!-- button class="try">Try it out</button -->
-
-        <button onclick="chrome.webstore.install();" class="install">Install it</button>
-    </div>
-
     <p class="sorry">
         Sorry, this extension is for Chrome only.
     </p>
+
+    <div class="buttons">
+        <!-- button class="try">Try it out</button -->
+        <button onclick="chrome.webstore.install();" class="install">Install it</button>
+    </div>
+
+    <div class="buttons not-chrome">
+        <!-- button class="try">Try it out</button -->
+        <button onclick="window.location='https://www.google.com/chrome/browser/desktop/index.html'">Install Chrome</button>
+    </div>
 
     <div class="section">
         <h2>What is it?</h2>
