@@ -63,6 +63,9 @@ body {
       vertical-align: top;
       font-size: 80px;
       margin-bottom: 10px; }
+      .site-container header h1 a, .site-container header h1 a:visited, .site-container header h1 a:hover, .site-container header h1 a:link {
+        text-decoration: none;
+        color: #362D26; }
     .site-container header .subheading {
       font-size: 28px;
       font-weight: 300; }
@@ -110,11 +113,71 @@ body {
     .site-container .section p {
       font-size: 18px;
       text-align: justify; }
+    .site-container .section .text-center {
+      text-align: center; }
     .site-container .section .share-links {
       margin-top: 30px;
       font-weight: bold;
       text-align: center; }
     .site-container .section .soon {
       text-align: center; }
+  .site-container ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 400px; }
+  .site-container .command {
+    display: block;
+    margin: 0 0 0.75em;
+    padding: 0 0 0.75em;
+    border-bottom: rgba(54, 45, 38, 0.15) solid 1px; }
+    .site-container .command .icon {
+      display: inline-block;
+      vertical-align: top;
+      height: 50px;
+      width: 50px;
+      margin-top: 4px;
+      border-radius: 3px;
+      margin-left: 5px;
+      padding: 0 15px;
+      background: #362D26 url("https://backtick.ninja//images/command-default.png") no-repeat center center;
+      background-size: 60%; }
+    .site-container .command .body {
+      display: inline-block;
+      margin-left: 10px;
+      width: 325px;
+      line-height: 1.2; }
+      .site-container .command .body .name {
+        display: block; }
+        .site-container .command .body .name .match {
+          font-weight: bold;
+          color: #ff9900; }
+      .site-container .command .body .description {
+        margin: 2px 0;
+        opacity: 0.8;
+        font-size: 14px;
+        font-style: italic; }
+        .site-container .command .body .description:empty {
+          display: none; }
+        .site-container .command .body .description .match {
+          font-weight: bold;
+          color: #ff9900; }
+      .site-container .command .body a.link, .site-container .command .body a.link:visited {
+        display: inline-block;
+        width: auto;
+        font-size: 12px;
+        margin-top: 3px;
+        opacity: 0.5;
+        cursor: pointer;
+        color: #362D26;
+        text-decoration: none; }
+        .site-container .command .body a.link:empty, .site-container .command .body a.link:visited:empty {
+          display: none; }
+        .site-container .command .body a.link:hover, .site-container .command .body a.link:visited:hover {
+          text-decoration: underline;
+          color: #ff9900;
+          opacity: 1; }
+        .site-container .command .body a.link .match, .site-container .command .body a.link:visited .match {
+          font-weight: bold;
+          color: #ff9900; }
 
 /*# sourceMappingURL=main.css.map */

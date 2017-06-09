@@ -1,3 +1,9 @@
+$root-url: 'https://backtick.ninja/';
+
+$brown: #362D26;
+$foreground-color: #fef8f0;
+$accent-color: #ff9900;
+
 @font-face {
 	font-family: 'Lato';
 	font-style: normal;
@@ -53,6 +59,7 @@ body {
 }
 
 .site-container {
+
 	max-width: 625px;
 	min-width: 325px;
 	margin: 0 auto;
@@ -76,6 +83,10 @@ body {
 			vertical-align: top;
 			font-size: 80px;
 			margin-bottom: 10px;
+			a, a:visited, a:hover, a:link {
+				text-decoration: none;
+				color: $brown;
+			}
 		}
 		.subheading {
 			font-size: 28px;
@@ -137,6 +148,9 @@ body {
 			font-size: 18px;
 			text-align: justify;
 		}
+		.text-center {
+			text-align: center;
+		}
 		.share-links {
 			margin-top: 30px;
 			font-weight: bold;
@@ -144,6 +158,87 @@ body {
 		}
 		.soon {
 			text-align: center;
+		}
+	}
+
+	ul {
+		margin: 0 auto;
+		padding: 0;
+		width: 400px;
+	}
+
+	.command {
+		display: block;
+		margin: 0 0 0.75em;
+		padding: 0 0 0.75em;
+		border-bottom: rgba($brown, 0.15) solid 1px;
+
+		.icon {
+			display: inline-block;
+			vertical-align: top;
+			height: 50px;
+			width: 50px;
+			margin-top: 4px;
+			border-radius: 3px;
+			margin-left: 5px;
+			padding: 0 15px;
+
+			background: $brown url($root-url + "/images/command-default.png") no-repeat center center;
+			background-size: 60%;
+		}
+
+		.body {
+			display: inline-block;
+			margin-left: 10px;
+			width: 325px;
+			line-height: 1.2;
+
+			.name {
+				display: block;
+
+				.match {
+					font-weight: bold;
+					color: $accent-color;
+				}
+			}
+
+			.description {
+				margin: 2px 0;
+				opacity: 0.8;
+				font-size: 14px;
+				font-style: italic;
+				&:empty {
+					display: none;
+				}
+				.match {
+					font-weight: bold;
+					color: $accent-color;
+				}
+			}
+
+			a.link, a.link:visited {
+				display: inline-block;
+				width: auto;
+				font-size: 12px;
+				margin-top: 3px;
+				opacity: 0.5;
+				cursor: pointer;
+				color: $brown;
+				text-decoration: none;
+				&:empty {
+					display: none;
+				}
+				&:hover {
+					text-decoration: underline;
+					color: $accent-color;
+					opacity: 1;
+				}
+
+				.match {
+					font-weight: bold;
+					color: $accent-color;
+				}
+			}
 		}
 	}
 }
